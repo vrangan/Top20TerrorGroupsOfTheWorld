@@ -19,7 +19,6 @@ Proudly open-sourced under the **Apache License 2.0**.
 - 🌎 Interactive world map with markers for terrorist organizations
 - 🖱️ Mouseover tooltips displaying group names
 - 📖 Clickable popups showing detailed descriptions (ideology, strength, sponsors)
-- 💣 Minesweeper explosion-style markers
 - 📈 Automatic Marker Clustering
 - 📄 Easily deployable via GitHub Pages
 - 🛡️ Open-source and educational-friendly
