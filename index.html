@@ -26,119 +26,65 @@
   <script>
     
 const groupInfo = {
-  "Iraq": {
-    name: "ISIS",
-    desc: "Islamic State (ISIS/ISIL) - Salafi-jihadism, no state sponsor, 5,000–7,000 core fighters."
-  },
-  "Syria": {
-    name: "ISIS (extended)",
-    desc: "ISIS operates in eastern Syria in addition to Iraq."
-  },
-  "Afghanistan": {
-    name: "Taliban & ISIS-K",
-    desc: "Taliban - Deobandi Islamist, former Pakistani ISI backing, ~75,000 fighters.\nISIS-K - Salafi-jihadist, no state sponsor, ~2,000 fighters."
-  },
-  "Yemen": {
-    name: "Houthis",
-    desc: "Houthis (Ansar Allah) - Zaydi Shia, Iran-backed, ~30,000 fighters."
-  },
-  "Lebanon": {
-    name: "Hezbollah",
-    desc: "Hezbollah - Shia Islamist, heavily backed by Iran, ~45,000 personnel."
-  },
-  "Nigeria": {
-    name: "Boko Haram",
-    desc: "Boko Haram - Salafi-jihadism, split factions, ~3,000 fighters."
-  },
-  "Somalia": {
-    name: "Al-Shabaab",
-    desc: "Al-Shabaab - Sunni extremist, AQ ties, ~7,000 fighters."
-  },
-  "Pakistan": {
-    name: "LeT & JeM",
-    desc: "Lashkar-e-Taiba & Jaish-e-Mohammed - Anti-India focus, ISI-linked, 500–3,000 combined."
-  },
-  "Yemen-AQAP": {
-    name: "Al-Qaeda (AQAP)",
-    desc: "Al-Qaeda in the Arabian Peninsula - Salafi-jihadist, 2,000–3,000 fighters."
-  },
-  "Philippines": {
-    name: "Abu Sayyaf Group (ASG)",
-    desc: "Abu Sayyaf Group - Salafi-jihadism, Islamist separatist insurgency."
-  },
-  "Nigeria-ISWAP": {
-    name: "Islamic State – West Africa Province (ISWAP)",
-    desc: "ISWAP - Salafi-jihadism, splinter group from Boko Haram."
-  },
-  "Pakistan-TTP": {
-    name: "Tehrik-i-Taliban Pakistan (TTP)",
-    desc: "TTP - Islamist extremism, anti-Pakistan government."
-  },
-  "Egypt": {
-    name: "Islamic State – Sinai Province (ISIS-SP)",
-    desc: "ISIS-SP - Salafi-jihadism, insurgency in Sinai Peninsula."
-  },
-  "Indonesia": {
-    name: "Jemaah Islamiyah (JI)",
-    desc: "JI - Islamist extremist group active in Southeast Asia."
-  },
-  "North Africa": {
-    name: "Al-Qaeda in the Islamic Maghreb (AQIM)",
-    desc: "AQIM - Salafi-jihadism, active across North Africa."
-  },
-  "Nigeria-Ansaru": {
-    name: "Ansaru",
-    desc: "Ansaru - Islamist group splintered from Boko Haram."
-  },
-  "Gaza": {
-    name: "Mujahideen Shura Council",
-    desc: "Mujahideen Shura Council - Salafi-jihadists active in Gaza Strip."
-  },
-  "China": {
-    name: "East Turkestan Islamic Movement (ETIM)",
-    desc: "ETIM - Islamist separatist group in Xinjiang."
-  },
-  "Colombia": {
-    name: "FARC Dissidents",
-    desc: "FARC Dissidents - Marxist–Leninist insurgent groups in Colombia."
-  }
+  "Iraq": { name: "ISIS – Iraq Core", desc: "Islamic State remnants operating mainly in Iraq.", strength: "3,000–4,000 fighters", rank: 1, lat: 33.3, lon: 44.3 },
+  "Syria": { name: "ISIS – Syria Branch", desc: "Islamic State cells active in eastern Syria.", strength: "1,500–3,000 fighters", rank: 2, lat: 35.3, lon: 40.1 },
+  "Afghanistan": { name: "Taliban & ISIS-K", desc: "Taliban (Deobandi Islamist) and ISIS-K (Salafi-jihadist).", strength: "75,000 Taliban + 2,000 ISIS-K", rank: 3, lat: 33.9, lon: 67.7 },
+  "Yemen": { name: "Houthis", desc: "Houthis (Ansar Allah) - Zaydi Shia insurgency backed by Iran.", strength: "30,000 fighters", rank: 4, lat: 15.6, lon: 48.5 },
+  "Lebanon": { name: "Hezbollah", desc: "Iran-backed Shia militant group and political party.", strength: "45,000 personnel", rank: 5, lat: 33.9, lon: 35.5 },
+  "Nigeria": { name: "Boko Haram", desc: "Jihadist group in northeastern Nigeria.", strength: "2,000–3,500 fighters", rank: 6, lat: 10.5, lon: 8.5 },
+  "Somalia": { name: "Al-Shabaab", desc: "Al-Qaeda affiliate active in Somalia and East Africa.", strength: "5,000–7,000 fighters", rank: 7, lat: 2.0, lon: 45.0 },
+  "Pakistan": { name: "LeT & JeM", desc: "Lashkar-e-Taiba and Jaish-e-Mohammed - Anti-India terror outfits.", strength: "1,500–3,000 combined", rank: 8, lat: 30.4, lon: 69.4 },
+  "Yemen-AQAP": { name: "Al-Qaeda in the Arabian Peninsula (AQAP)", desc: "Yemeni branch of Al-Qaeda.", strength: "2,000–3,000 fighters", rank: 9, lat: 15.4, lon: 47.0 },
+  "Philippines": { name: "Abu Sayyaf Group (ASG)", desc: "Islamist separatists in southern Philippines.", strength: "300–500 fighters", rank: 10, lat: 6.0, lon: 121.0 },
+  "Nigeria-ISWAP": { name: "ISWAP", desc: "Islamic State West Africa Province - Boko Haram splinter.", strength: "3,000–5,000 fighters", rank: 11, lat: 13.5, lon: 13.5 },
+  "Pakistan-TTP": { name: "Tehrik-i-Taliban Pakistan (TTP)", desc: "Pakistani Taliban insurgents.", strength: "3,000–6,000 fighters", rank: 12, lat: 34.5, lon: 71.5 },
+  "Egypt": { name: "ISIS – Sinai Province", desc: "ISIS-affiliate operating in Egypt's Sinai Peninsula.", strength: "500–1,200 fighters", rank: 13, lat: 30.0, lon: 33.8 },
+  "Indonesia": { name: "Jemaah Islamiyah (JI)", desc: "Southeast Asian Islamist terrorist network.", strength: "800–1,200 militants", rank: 14, lat: -6.2, lon: 106.8 },
+  "North Africa": { name: "AQIM", desc: "Al-Qaeda in the Islamic Maghreb, active across the Sahel.", strength: "300–800 militants", rank: 15, lat: 26.0, lon: 0.0 },
+  "Nigeria-Ansaru": { name: "Ansaru", desc: "Breakaway Boko Haram faction, AQ-aligned.", strength: "Few hundred fighters", rank: 16, lat: 11.0, lon: 7.7 },
+  "Gaza": { name: "Mujahideen Shura Council", desc: "Salafi-jihadists operating in Gaza Strip.", strength: "Under 100 fighters", rank: 17, lat: 31.5, lon: 34.5 },
+  "China": { name: "ETIM", desc: "Uyghur Islamist separatists in Xinjiang.", strength: "200–300 members", rank: 18, lat: 41.7, lon: 87.6 },
+  "Colombia": { name: "FARC Dissidents", desc: "Post-accord Marxist-Leninist guerrilla groups.", strength: "2,000–3,000 fighters", rank: 19, lat: 3.5, lon: -73.5 },
+  "Mozambique": { name: "ISCAP (ISIS-Central Africa Province)", desc: "ISIS-affiliate insurgency in Mozambique & DRC.", strength: "500–1,000 fighters", rank: 20, lat: -12.9, lon: 40.5 }
 };
 
 
-    const map = L.map('map').setView([20, 0], 2);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 5,
+    //const map = L.map('map').setView([20, 0], 2);
+    const map = L.map('map', {
+      worldCopyJump: true,
+      maxBounds: [[-85, -180], [85, 180]],
+      maxBoundsViscosity: 1.0
+    }).setView([20, 0], 2);
+
+    L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://carto.com/">CartoDB</a> contributors',
+      subdomains: 'abcd',
+      maxZoom: 5
     }).addTo(map);
+
+    //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //  maxZoom: 5,
+    //}).addTo(map);
 
     const markers = L.markerClusterGroup();
 
-    const explosionIcon = L.icon({
-      iconUrl: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
-      iconSize: [24, 24],
-      iconAnchor: [12, 12],
-      popupAnchor: [0, -12]
-    });
-
     for (const [country, data] of Object.entries(groupInfo)) {
-      fetch(`https://nominatim.openstreetmap.org/search?country={country}&format=json`)
-        .then(res => res.json())
-        .then(json => {
-          if (json && json.length > 0) {
-            const lat = parseFloat(json[0].lat);
-            const lon = parseFloat(json[0].lon);
-            const marker = L.marker([lat, lon], { icon: explosionIcon });
-
-            marker.bindTooltip(data.name);
-            marker.on('click', () => {
-              L.popup()
-                .setLatLng([lat, lon])
-                .setContent(`<div class='info-box'><strong>{data.name}</strong><br>{data.desc}</div>`)
-                .openOn(map);
-            });
-
-            markers.addLayer(marker);
-          }
-        });
+      //const marker = L.circleMarker([lat, lon], {
+      //        radius: 8,
+      //        fillColor: "red",
+      //        color: "black",
+      //        weight: 1,
+      //        fillOpacity: 0.6
+      //      });
+      const marker = L.marker([data.lat, data.lon]);
+      marker.bindTooltip(`#${data.rank}: ${data.name}`);
+      marker.on('click', () => {
+        L.popup()
+          .setLatLng([data.lat, data.lon])
+          .setContent(`<div class='info-box'><strong>#${data.rank}: ${data.name}</strong><br>${data.desc}<br><b>Estimated Strength:</b> ${data.strength}</div>`)
+          .openOn(map);
+      });
+      markers.addLayer(marker);
     }
 
     map.addLayer(markers);
