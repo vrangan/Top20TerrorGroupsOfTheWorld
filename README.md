@@ -77,7 +77,7 @@ Apache License 2.0
 - [CartoDB (Carto)](https://carto.com/) for providing free, high-quality Positron basemaps.
 - [Leaflet.js](https://leafletjs.com/) for the core mapping framework.
 - [Leaflet MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) for clustering support.
-- [OpenAI's ChatGPT][https://chatgpt.com) for the data and research and help with rendering
+- [OpenAI ChatGPT](https://chatgpt.com) for the data and research and help with rendering
 - Built with passion for open-source education and global understanding. 🌍✨
 
 
