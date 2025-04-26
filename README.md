@@ -64,16 +64,22 @@ Then visit: [http://localhost:8000/Top20TerrorGroupsOfTheWorld/](http://localhos
 _Data compiled and organized with assistance from OpenAI's ChatGPT._
 
 ## ⚙️ Technologies Used
-- Leaflet.js
-- OpenStreetMap
-- Leaflet.markercluster
-- Flaticon
+- Leaflet.js - interactive maps
+- OpenStreetMap - Underlying map data
+- Leaflet.markercluster - marker clustering
+- CartoDB Positron Basemap — English-only tile provider for clean global maps
 
 ## 📃 License
 Apache License 2.0
 
 ## ✨ Acknowledgements
-Special thanks to OpenStreetMap, Leaflet.js, MarkerCluster plugin authors, and OpenAI's ChatGPT.
+- [OpenStreetMap](https://www.openstreetmap.org/) contributors for the geographic data.
+- [CartoDB (Carto)](https://carto.com/) for providing free, high-quality Positron basemaps.
+- [Leaflet.js](https://leafletjs.com/) for the core mapping framework.
+- [Leaflet MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) for clustering support.
+- [OpenAI's ChatGPT][https://chatgpt.com) for the data and research and help with rendering
+- Built with passion for open-source education and global understanding. 🌍✨
+
 
 
 ---
