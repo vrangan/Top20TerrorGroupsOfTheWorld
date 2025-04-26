@@ -73,11 +73,6 @@ python3 -m http.server 8000
 ```
 Visit [http://localhost:8000](http://localhost:8000) in your browser.
 
-### Deploying on GitHub Pages:
-- Push the project to a GitHub repository.
-- Go to **Settings → Pages → Source** and select your branch and `/root` directory.
-- The map will be live at `https://your-username.github.io/your-repo-name/`
-
 ---
 
 ## ⚠️ Disclaimer
