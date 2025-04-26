@@ -26,19 +26,19 @@ Proudly open-sourced under the **Apache License 2.0**.
 
 ## 🌐 Live Demo
 
-🔗 [View the Live Demo Here](https://<your-username>.github.io/terror-groups-interactive-map-top20/)
+🔗 [View the Live Demo Here](https://vrangan.github.io/Top20TerrorGroupsOfTheWorld/)
 
 ## 📦 Installation and Deployment
 
 ### Local Deployment
 
 ```bash
-git clone https://github.com/<your-username>/terror-groups-interactive-map-top20.git
-cd terror-groups-interactive-map-top20
+git clone https://github.com/vrangan/Top20TerrorGroupsOfTheWorld.git
+cd Top20TerrorGroupsOfTheWorld
 python3 -m http.server 8000
 ```
 
-Then visit: [http://localhost:8000/terror-groups-interactive-map-top20/](http://localhost:8000/terror-groups-interactive-map-top20/)
+Then visit: [http://localhost:8000/Top20TerrorGroupsOfTheWorld/](http://localhost:8000/Top20TerrorGroupsOfTheWorld/)
 
 ### GitHub Pages Deployment
 
