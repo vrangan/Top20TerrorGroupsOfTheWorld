@@ -1,87 +1,92 @@
 
-# 🌍 Top 20 Terror Groups - Interactive Map
+# 🌍 Top 20 Terror Groups Interactive World Map
 
-[![View Demo](https://img.shields.io/badge/View-Demo-blue)](https://<your-username>.github.io/terror-groups-interactive-map-top20/)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-![Made with Leaflet](https://img.shields.io/badge/Made%20with-Leaflet.js-brightgreen)
-![Built with OpenStreetMap](https://img.shields.io/badge/Built%20with-OpenStreetMap-blue)
-[![Open Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/<your-username>/terror-groups-interactive-map-top20/)
+![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
+![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)
 
-## ✨ Project Overview
-
-An **interactive world map** visualizing the **Top 20 major terrorist organizations**, their regions of operation, ideologies, strength, and major state sponsors.
-
-Built with **Leaflet.js** and **OpenStreetMap**, enhanced with **Marker Clustering** and **custom explosion-style icons**.
-
-Proudly open-sourced under the **Apache License 2.0**.
-
-## 🚀 Features
-- 🌎 Interactive world map with markers for terrorist organizations
-- 🖱️ Mouseover tooltips displaying group names
-- 📖 Clickable popups showing detailed descriptions (ideology, strength, sponsors)
-- 📈 Automatic Marker Clustering
-- 📄 Easily deployable via GitHub Pages
-- 🛡️ Open-source and educational-friendly
-
-## 🌐 Live Demo
-
-🔗 [View the Live Demo Here](https://vrangan.github.io/Top20TerrorGroupsOfTheWorld/)
-
-## 📦 Installation and Deployment
-
-### Local Deployment
-
-```bash
-git clone https://github.com/vrangan/Top20TerrorGroupsOfTheWorld.git
-cd Top20TerrorGroupsOfTheWorld
-python3 -m http.server 8000
-```
-
-Then visit: [http://localhost:8000/Top20TerrorGroupsOfTheWorld/](http://localhost:8000/Top20TerrorGroupsOfTheWorld/)
-
-### GitHub Pages Deployment
-
-1. Push your code to GitHub.
-2. Go to Settings → Pages → Deploy from branch → main, / (root).
-3. Save and access your live site.
-
-## 📜 Data Sources
-- U.S. Department of State – Country Reports on Terrorism 2023
-- Global Terrorism Index 2024 – Institute for Economics and Peace
-- United Nations Security Council – Counter Terrorism Committee Reports
-- Congressional Research Service (CRS) – Terrorism Profiles
-
-## 📚 References and Data Sources
-
-- [U.S. Department of State – Country Reports on Terrorism 2023](https://www.state.gov/reports/country-reports-on-terrorism-2023/)
-- [Global Terrorism Index 2024 – Institute for Economics and Peace](https://www.visionofhumanity.org/maps/global-terrorism-index/)
-- [United Nations Security Council – Counter Terrorism Committee Reports](https://www.un.org/securitycouncil/ctc/reports)
-- [Congressional Research Service (CRS) – Terrorism Reports](https://crsreports.congress.gov/)
-- [Mapping Militant Organizations – Stanford University](https://cisac.fsi.stanford.edu/mappingmilitants)
-- [National Counterterrorism Center (NCTC) – Groups Database](https://www.dni.gov/nctc/groups.html)
-- [Center for Strategic and International Studies (CSIS) – Transnational Threats Project](https://www.csis.org/programs/international-security-program/transnational-threats-project)
-
-_Data compiled and organized with assistance from OpenAI's ChatGPT._
-
-## ⚙️ Technologies Used
-- Leaflet.js - interactive maps
-- OpenStreetMap - Underlying map data
-- Leaflet.markercluster - marker clustering
-- CartoDB Positron Basemap — English-only tile provider for clean global maps
-
-## 📃 License
-Apache License 2.0
-
-## ✨ Acknowledgements
-- [OpenStreetMap](https://www.openstreetmap.org/) contributors for the geographic data.
-- [CartoDB (Carto)](https://carto.com/) for providing free, high-quality Positron basemaps.
-- [Leaflet.js](https://leafletjs.com/) for the core mapping framework.
-- [Leaflet MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) for clustering support.
-- [OpenAI ChatGPT](https://chatgpt.com) for the data and research and help with rendering
-- Built with passion for open-source education and global understanding. 🌍✨
-
-
+An educational, open-source project visualizing the world's top 20 most impactful terror groups based on global threat, strategic importance, and transnational influence.  
+Built with the goal of promoting better understanding of global security challenges.
 
 ---
 
-*Built with passion for open-source, education, and global understanding.* 🌍✨
+## 📚 Technologies Used
+
+- [Leaflet.js](https://leafletjs.com/) — Interactive maps
+- [Leaflet MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) — Marker clustering
+- [CartoDB Positron Basemap](https://carto.com/basemaps/) — English-only global map tiles
+- [OpenStreetMap](https://www.openstreetmap.org/) — Underlying map data
+- HTML5, CSS3 — Static web technologies for deployment
+
+---
+
+## ✨ Features
+
+- 📍 Interactive world map showing the top 20 terror groups
+- 🖱️ Hover tooltips displaying group rank and name
+- 🖱️ Clickable markers revealing detailed information (description and estimated strength)
+- 🔗 Static and offline compatible — easily deployable on GitHub Pages or static hosting
+- 🗺️ English-only map labels for global consistency
+- 🌐 World wrapping disabled for cleaner navigation
+
+---
+
+## 🌍 How Groups Were Ranked (Methodology)
+
+The ranking of groups is based on a **composite threat assessment**, considering multiple dimensions beyond just fighter numbers.
+
+| Factor | Description |
+|:---|:---|
+| **Global Threat Impact** | Influence on international security, including global recruitment and operations. |
+| **Strategic Importance** | Control over territory, resources, political influence. |
+| **State Sponsorship** | Support by nation-states, enhancing operational strength. |
+| **Operational Capability** | Sophistication and scale of attacks. |
+| **Transnational Activity** | Ability to operate across multiple regions and borders. |
+| **Longevity and Resilience** | Survival through military pressure and leadership losses. |
+| **Affiliations and Networks** | Ties to global terror movements (Al-Qaeda, ISIS, etc.). |
+| **Propaganda and Influence Operations** | Ability to radicalize and inspire globally. |
+
+📌 **Note:**  
+- Estimated strength (fighter numbers) was a **secondary factor**.
+- Groups with **smaller size** but **greater global impact** were ranked appropriately higher than purely local insurgencies.
+
+---
+
+## 🙏 Acknowledgements
+
+- [OpenStreetMap](https://www.openstreetmap.org/) contributors for foundational geographic data.
+- [CartoDB (Carto)](https://carto.com/) for providing free access to the Positron English-labeled basemaps.
+- [Leaflet.js](https://leafletjs.com/) for the core mapping library.
+- [Leaflet MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) for elegant clustering functionality.
+- [OpenAI ChatGPT](https://chatgpt.com) for the data, research and help with rendering
+- Built with passion for open-source education and global understanding. 🌍✨
+
+---
+
+## 🚀 Deployment
+
+### Running Locally:
+```bash
+cd terror-groups-interactive-map-top20-final-corrected
+python3 -m http.server 8000
+```
+Visit [http://localhost:8000](http://localhost:8000) in your browser.
+
+### Deploying on GitHub Pages:
+- Push the project to a GitHub repository.
+- Go to **Settings → Pages → Source** and select your branch and `/root` directory.
+- The map will be live at `https://your-username.github.io/your-repo-name/`
+
+---
+
+## ⚠️ Disclaimer
+
+> **Disclaimer:**  
+> This project is intended **for educational and informational purposes only**.  
+> The data presented here is based on publicly available sources and does not constitute an official intelligence assessment.  
+>  
+> While efforts have been made to ensure accuracy, the information may be incomplete, outdated, or subject to change.  
+> The creators of this project do not endorse any group listed and are not affiliated with any government, defense, or intelligence agency.
+
+---
