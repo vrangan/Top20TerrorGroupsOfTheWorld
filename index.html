@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Top 20 Terror Groups - Interactive Map</title>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <style>
+    #map { height: 90vh; }
+    .info-box {
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h2>Top 20 Terror Groups - Interactive World Map</h2>
+  <div id="map"></div>
+  <script>
+    
+const groupInfo = {
+  "Iraq": {
+    name: "ISIS",
+    desc: "Islamic State (ISIS/ISIL) - Salafi-jihadism, no state sponsor, 5,000–7,000 core fighters."
+  },
+  "Syria": {
+    name: "ISIS (extended)",
+    desc: "ISIS operates in eastern Syria in addition to Iraq."
+  },
+  "Afghanistan": {
+    name: "Taliban & ISIS-K",
+    desc: "Taliban - Deobandi Islamist, former Pakistani ISI backing, ~75,000 fighters.\nISIS-K - Salafi-jihadist, no state sponsor, ~2,000 fighters."
+  },
+  "Yemen": {
+    name: "Houthis",
+    desc: "Houthis (Ansar Allah) - Zaydi Shia, Iran-backed, ~30,000 fighters."
+  },
+  "Lebanon": {
+    name: "Hezbollah",
+    desc: "Hezbollah - Shia Islamist, heavily backed by Iran, ~45,000 personnel."
+  },
+  "Nigeria": {
+    name: "Boko Haram",
+    desc: "Boko Haram - Salafi-jihadism, split factions, ~3,000 fighters."
+  },
+  "Somalia": {
+    name: "Al-Shabaab",
+    desc: "Al-Shabaab - Sunni extremist, AQ ties, ~7,000 fighters."
+  },
+  "Pakistan": {
+    name: "LeT & JeM",
+    desc: "Lashkar-e-Taiba & Jaish-e-Mohammed - Anti-India focus, ISI-linked, 500–3,000 combined."
+  },
+  "Yemen-AQAP": {
+    name: "Al-Qaeda (AQAP)",
+    desc: "Al-Qaeda in the Arabian Peninsula - Salafi-jihadist, 2,000–3,000 fighters."
+  },
+  "Philippines": {
+    name: "Abu Sayyaf Group (ASG)",
+    desc: "Abu Sayyaf Group - Salafi-jihadism, Islamist separatist insurgency."
+  },
+  "Nigeria-ISWAP": {
+    name: "Islamic State – West Africa Province (ISWAP)",
+    desc: "ISWAP - Salafi-jihadism, splinter group from Boko Haram."
+  },
+  "Pakistan-TTP": {
+    name: "Tehrik-i-Taliban Pakistan (TTP)",
+    desc: "TTP - Islamist extremism, anti-Pakistan government."
+  },
+  "Egypt": {
+    name: "Islamic State – Sinai Province (ISIS-SP)",
+    desc: "ISIS-SP - Salafi-jihadism, insurgency in Sinai Peninsula."
+  },
+  "Indonesia": {
+    name: "Jemaah Islamiyah (JI)",
+    desc: "JI - Islamist extremist group active in Southeast Asia."
+  },
+  "North Africa": {
+    name: "Al-Qaeda in the Islamic Maghreb (AQIM)",
+    desc: "AQIM - Salafi-jihadism, active across North Africa."
+  },
+  "Nigeria-Ansaru": {
+    name: "Ansaru",
+    desc: "Ansaru - Islamist group splintered from Boko Haram."
+  },
+  "Gaza": {
+    name: "Mujahideen Shura Council",
+    desc: "Mujahideen Shura Council - Salafi-jihadists active in Gaza Strip."
+  },
+  "China": {
+    name: "East Turkestan Islamic Movement (ETIM)",
+    desc: "ETIM - Islamist separatist group in Xinjiang."
+  },
+  "Colombia": {
+    name: "FARC Dissidents",
+    desc: "FARC Dissidents - Marxist–Leninist insurgent groups in Colombia."
+  }
+};
+
+
+    const map = L.map('map').setView([20, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 5,
+    }).addTo(map);
+
+    const markers = L.markerClusterGroup();
+
+    const explosionIcon = L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+      popupAnchor: [0, -12]
+    });
+
+    for (const [country, data] of Object.entries(groupInfo)) {
+      fetch(`https://nominatim.openstreetmap.org/search?country={country}&format=json`)
+        .then(res => res.json())
+        .then(json => {
+          if (json && json.length > 0) {
+            const lat = parseFloat(json[0].lat);
+            const lon = parseFloat(json[0].lon);
+            const marker = L.marker([lat, lon], { icon: explosionIcon });
+
+            marker.bindTooltip(data.name);
+            marker.on('click', () => {
+              L.popup()
+                .setLatLng([lat, lon])
+                .setContent(`<div class='info-box'><strong>{data.name}</strong><br>{data.desc}</div>`)
+                .openOn(map);
+            });
+
+            markers.addLayer(marker);
+          }
+        });
+    }
+
+    map.addLayer(markers);
+  </script>
+</body>
+</html>
