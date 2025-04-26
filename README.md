@@ -1,5 +1,5 @@
 
-# 🌍 Terror Groups Interactive Map (Top 20 Edition)
+# 🌍 Top 20 Terror Groups - Interactive Map
 
 [![View Demo](https://img.shields.io/badge/View-Demo-blue)](https://<your-username>.github.io/terror-groups-interactive-map-top20/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
