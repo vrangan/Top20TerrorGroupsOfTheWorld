@@ -46,7 +46,13 @@ const groupInfo = {
 };
 
 
-    const map = L.map('map').setView([20, 0], 2);
+    const map = L.map('map', {
+      worldCopyJump: true,
+      maxBounds: [[-85, -180], [85, 180]],
+      maxBoundsViscosity: 1.0
+    }).setView([20, 0], 2);
+
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 5 }).addTo(map);
 
     //const grenadeIcon = L.icon({
