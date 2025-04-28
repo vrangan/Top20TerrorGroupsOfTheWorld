@@ -32,7 +32,6 @@ This project is an **interactive world map** that highlights the Top 10 global t
 - 🖱️ Clickable markers revealing detailed information (description and estimated strength)
 - 🔗 Static and offline compatible — easily deployable on GitHub Pages or static hosting
 - 🗺️ English-only map labels for global consistency
-- 🌐 World wrapping disabled for cleaner navigation
 
 ---
 
