@@ -11,7 +11,7 @@ Built with the goal of promoting better understanding of global security challen
 
 ---
 
-[![View Demo](https://img.shields.io/badge/View-Demo-blue)](https://vrangan.github.io/terror-groups-interactive-map/)
+[![View Demo](https://img.shields.io/badge/View-Demo-blue)](https://vrangan.github.io/terror-groups-interactive-map/) - View Demo
 
 This project is an **interactive world map** that highlights the Top 10 global terrorist organizations...
 ## 📚 Technologies Used
