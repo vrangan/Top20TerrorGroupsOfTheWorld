@@ -10,17 +10,18 @@ An educational, open-source project visualizing the world's top 20 most impactfu
 Built with the goal of promoting better understanding of global security challenges.
 
 ---
-
-[![View Demo](https://img.shields.io/badge/View-Demo-blue)](https://vrangan.github.io/terror-groups-interactive-map/) - View Demo
+# 🌍 Terror Groups Interactive Map
+[![View Demo](https://img.shields.io/badge/View-Demo-blue)](https://vrangan.github.io/Top20TerrorGroupsOfTheWorld/)
 
 This project is an **interactive world map** that highlights the Top 10 global terrorist organizations...
+
 ## 📚 Technologies Used
 
 - [Leaflet.js](https://leafletjs.com/) — Interactive maps
 - [Leaflet MarkerCluster](https://github.com/Leaflet/Leaflet.markercluster) — Marker clustering
 - [CartoDB Positron Basemap](https://carto.com/basemaps/) — English-only global map tiles
 - [OpenStreetMap](https://www.openstreetmap.org/) — Underlying map data
-- HTML5, CSS3 — Static web technologies for deployment
+- HTML5, CSS3 — Static web deployment
 
 ---
 
